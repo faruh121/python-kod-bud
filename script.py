@@ -155,24 +155,111 @@
 
 
 
-def pramougol(a,b):
-    s = a*b
-    p = a+b+a+b
-    print(f'Периметр -  {p} Площадь - {s}')
-pramougol(4,5)
+# def pramougol(a,b):
+#     s = a*b
+#     p = a+b+a+b
+#     print(f'Периметр -  {p} Площадь - {s}')
+# pramougol(4,5)
 
-x = int(input("введите год: "))
-def chekgod(a):
-    if (a%4==0 and a%100==1) or (a%400==0):
-        print("Весокосный")
-    else:
-        print("Не вескосный")
-chekgod(a=x)
-
-
+# x = int(input("введите год: "))
+# def chekgod(a):
+#     if (a%4==0 and a%100==1) or (a%400==0):
+#         print("Весокосный")
+#     else:
+#         print("Не вескосный")
+# chekgod(a=x)
 
 
+# circl = [-2,3,10]
+# #[x,y,r] or [r,x,y]
+# def func():
+#     pass
 
+
+# class Test:
+#     pass
+
+
+# print(type(5))
+# print(type('a'))
+# print(type(5.5))
+# print(type(True))
+# print(type({1:2}))
+# print(type([1,2]))
+# print(type((1,2)))
+# print(type(func))
+# print(type(Test))
+
+
+
+# class Person:
+#     name='Ваня'
+#     age = 12
+#     def say(self):
+#         print("Hello")
+
+# person1 = Person()
+# print(person1.name)
+# person1.say()    
+
+
+
+# person2 = Person()
+# person2.name = 'Arkadiy'
+# print(person2.name)
+
+
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name 
+#         self.age = age
+#         #return f'Меня зовут{self.name}'
+# #MEtod init
+# person1 = Person(name='Ivan',age=15)
+# person2 = Person(name='Petr',age=14)
+# print(person1.age)
+# print(person1.name)
+# print(person2.age)
+# print(person2.name)
+# print(person1)
+# print(person1)
+
+
+
+
+
+class Transport:
+    def __init__(self,speed,color) :
+        self.speed = speed
+        self.color = color
+
+    def beep(self):
+        print('beep')
+
+class Car(Transport):
+    def __init__(self, speed, color,owner):
+        self.owner = owner
+        super().__init__(speed, color)
+    def sayowner(self):
+        print(f'Владелец:{self.owner}')
+car1 = Car(speed=100,color='red',owner='Василий')
+print(car1.color)    
+print(car1.speed)    
+print(car1.owner)
+car1.beep()
+car1.sayowner()
+
+
+class bus(Transport):
+    def __init__(self, speed, color,seets):
+        super().__init__(speed, color)
+        self.seets =seets
+    def sayseet(self):
+        print(f'Кол - во мест{self.seets}')
+
+bus1 = bus(speed=100,seets=20,color='white')
+bus1.sayseet()
 
 
 
