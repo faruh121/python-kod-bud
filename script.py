@@ -229,37 +229,111 @@
 
 
 
-class Transport:
-    def __init__(self,speed,color) :
-        self.speed = speed
-        self.color = color
+# class Transport:
+#     def __init__(self,speed,color) :
+#         self.speed = speed
+#         self.color = color
 
-    def beep(self):
-        print('beep')
+#     def beep(self):
+#         print('beep')
 
-class Car(Transport):
-    def __init__(self, speed, color,owner):
-        self.owner = owner
-        super().__init__(speed, color)
-    def sayowner(self):
-        print(f'Владелец:{self.owner}')
-car1 = Car(speed=100,color='red',owner='Василий')
-print(car1.color)    
-print(car1.speed)    
-print(car1.owner)
-car1.beep()
-car1.sayowner()
+# class Car(Transport):
+#     def __init__(self, speed, color,owner):
+#         self.owner = owner
+#         super().__init__(speed, color)
+#     def sayowner(self):
+#         print(f'Владелец:{self.owner}')
+# car1 = Car(speed=100,color='red',owner='Василий')
+# print(car1.color)    
+# print(car1.speed)    
+# print(car1.owner)
+# car1.beep()
+# car1.sayowner()
 
 
-class bus(Transport):
-    def __init__(self, speed, color,seets):
-        super().__init__(speed, color)
-        self.seets =seets
-    def sayseet(self):
-        print(f'Кол - во мест{self.seets}')
+# class bus(Transport):
+#     def __init__(self, speed, color,seets):
+#         super().__init__(speed, color)
+#         self.seets =seets
+#     def sayseet(self):
+#         print(f'Кол - во мест{self.seets}')
 
-bus1 = bus(speed=100,seets=20,color='white')
-bus1.sayseet()
+# bus1 = bus(speed=100,seets=20,color='white')
+# bus1.sayseet()
+
+
+
+# class Sportcar(Car,Transport):
+#     pass
+
+# car1 = Sportcar(speed=200,color='red',owner='Maks')
+# car1.beep()
+# car1.sayowner()
+
+#Написать класс ученика класса.Описать все возможные свойства которые можно обобщить для каждого ученика так же сохадть немного методов
+
+
+# class student:
+#     def __init__(self,name,age,clas):
+
+#         self.clas= clas
+#         self.name = name
+#         self.age = age
+#     def sayotm(self):
+#         print("Я ничего не сделал(")
+#     def sayops(self):
+#         print("Здарвствуйте извините за опоздание")
+
+# stud1 = student(name="Василий",age=12,clas=6)
+# stud2 = student(name="Максим",age=13,clas=6)
+# stud3 = student(name="Иван",age=11,clas=6)
+# stud4 = student(name="Алексей",age=12,clas=6)
+
+
+
+# print(stud1.name,stud1.age,stud1.clas)
+# print(stud2.name,stud2.age,stud2.clas)
+# print(stud3.name,stud3.age,stud3.clas)
+# print(stud4.name,stud4.age,stud4.clas)
+
+# stud1.sayops()
+# stud1.sayotm()
+
+
+
+
+#Реализовать род класс человека а так же под классы,а также дочерние классы деректора преподорватели и ученика
+class School:
+    pass
+class student(School):
+    def student(self,age,name,obazon):
+        self.name = name
+        self.age = age
+        self.obazon = obazon
+class AdminSchool(School):
+    def Director(self,age,name,obazon):
+        self.name = name
+        self.age = age
+        self.obazon = obazon
+class Learner(School):
+    def Teacher(self,age,name,obazon):
+        self.name = name
+        self.age = age
+        self.obazon = obazon
+dir = AdminSchool(name = 'Василий',age=45,obazon='Учить и Контралировать школу')
+tiuter = Learner(name = 'Маша',age=25,obazon='Учить')
+stud = student(name = 'Леша',age=15,obazon='Учитьcя')
+
+print(dir.name,dir.age,dir.obazon)
+print(tiuter.name,tiuter.age,tiuter.obazon)
+print(stud.name,stud.age,stud.obazon)
+
+
+
+    
+        
+
+
 
 
 
