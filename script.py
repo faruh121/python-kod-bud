@@ -302,34 +302,33 @@
 
 
 
-#Реализовать род класс человека а так же под классы,а также дочерние классы деректора преподорватели и ученика
-class School:
-    pass
-class student(School):
-    def student(self,age,name,obazon):
+#Реализовать род класс человека ,а также дочерние классы деректора преподорватели и ученика
+class school:
+    def __init__(self,age,name,obazon,rank):
+
         self.name = name
         self.age = age
         self.obazon = obazon
-class AdminSchool(School):
-    def Director(self,age,name,obazon):
-        self.name = name
-        self.age = age
-        self.obazon = obazon
-class Learner(School):
-    def Teacher(self,age,name,obazon):
-        self.name = name
-        self.age = age
-        self.obazon = obazon
-dir = AdminSchool(name = 'Василий',age=45,obazon='Учить и Контралировать школу')
-tiuter = Learner(name = 'Маша',age=25,obazon='Учить')
-stud = student(name = 'Леша',age=15,obazon='Учитьcя')
+        self.rank = rank
 
-print(dir.name,dir.age,dir.obazon)
-print(tiuter.name,tiuter.age,tiuter.obazon)
-print(stud.name,stud.age,stud.obazon)
+class student(school):
+    def __init__(self,age,name,obazon,rank):
+        super().__init__(age,name,obazon,rank)
+class teacher(school):
+    def __init__(self,age,name,obazon,rank):
+        super().__init__(age,name,obazon,rank)
+class Administration(school):
+    def __init__(self,age,name,obazon,rank):
+        super().__init__(age,name,obazon,rank)
 
 
+stud_name = student(name='Василий',age=15,obazon='Учиться',rank='Ученик')
+Tiuter_name = teacher(name='Иван',age=25,obazon='Учить',rank='Учитель')
+Admin_name = Administration(name='Алеша',age=55,obazon='Учить , управлять школой',rank='Директор')
 
+print(f'Здравствуйте, меня зовут - {stud_name.name}, мне {stud_name.age} лет, я {stud_name.rank} и я обязан {stud_name.obazon}')
+print(f'Здравствуйте, меня зовут - {Tiuter_name.name}, мне {Tiuter_name.age} лет, я {Tiuter_name.rank} и я обязан {Tiuter_name.obazon}')
+print(f'Здравствуйте, меня зовут - {Admin_name.name}, мне {Admin_name.age} лет, я {Admin_name.rank} и я обязан {Admin_name.obazon}')
     
         
 
