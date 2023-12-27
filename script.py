@@ -527,3 +527,6 @@ from module import *
             
 # полный путь
 # import my_package.primitive.fill.func()
+'''
+match and case rabotout tipa if
+'''
