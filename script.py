@@ -416,63 +416,114 @@
 # print(b)
 
 
-class chto(int):
-    def __init__(self,num) -> None:
-        super().__init__()
-        self.num = num
+# class chto(int):
+#     def __init__(self,num) -> None:
+#         super().__init__()
+#         self.num = num
 
-    def __add__(self, num2):
-        return self.num * num2
+#     def __add__(self, num2):
+#         return self.num * num2
     
-a = chto(5)
-print(a+10)
+# a = chto(5)
+# print(a+10)
 
 
-class Point2D:
-    '''Точка на плоскости
-    поле класса(доступна без создания экзэмпляров)
-    хранит кол-во экзэмпляров класса т является обще для всех объектов этого класса
-    '''
+# class Point2D:
+#     '''Точка на плоскости
+#     поле класса(доступна без создания экзэмпляров)
+#     хранит кол-во экзэмпляров класса т является обще для всех объектов этого класса
+#     '''
 
-    instanes_count = 0
-    def __init__(self,x,y):
-        self.x = x
-        self.y = y
-        #При инстацировании уведичиваем кол во экзэмпляров класса
-        Point2D.instanes_count+=1
+#     instanes_count = 0
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#         #При инстацировании уведичиваем кол во экзэмпляров класса
+#         Point2D.instanes_count+=1
 
-        def __str__(self):
-            '''Вренуть строку в виде точка 2 д (х,у)'''
-            return f'ТОчка 2 д {self.x,self.y}'
-        def __add__(self,other):
-            #Сложить селф и отхер
-            #Параметры:
-            # - other(Point2D):Вернуть объект сумму
-            #еСЛИ INT OR FLOAT СДВИНУТЬ ТОЧКУ НА ОТЗЕР ПО Х У 
-            # - отхер другой тип возбудить исключение тайп еророр
+#         def __str__(self):
+#             '''Вренуть строку в виде точка 2 д (х,у)'''
+#             return f'ТОчка 2 д {self.x,self.y}'
+#         def __add__(self,other):
+#             #Сложить селф и отхер
+#             #Параметры:
+#             # - other(Point2D):Вернуть объект сумму
+#             #еСЛИ INT OR FLOAT СДВИНУТЬ ТОЧКУ НА ОТЗЕР ПО Х У 
+#             # - отхер другой тип возбудить исключение тайп еророр
 
-            if isinstance(other, self.__class__):
-                #ТОчка с точкой
-                #Возращает новый объект
-                return Point2D(self.x+other.x,self.y+other.y)
-            elif isinstance(other, (int,float)):
-                '''Точка и число
-                добавим обим координатам селф число отхер и вернем результат
-                Возвращаем старый измененный объект'''
-                self.x +=other
-                self.y +=other
-                return self
-            else:
-                '''В противном случае мы сгенерируем исключени'''
-                raise TypeError(f'Не могу добавить {type(other)} к {self.__class__}')
-        def __sub__(self,other):
-            #СОздать новый объект как разность координат
-            return Point2D(self.x-other.x,self.y-other.y)
-        def __neg__(self):
-            return Point2D(-self.x,-self.y)
-        def __eq__(self,other):
-            return self.x==other.x,self.y==other.y
-n1 = Point2D(0,5)
-n2 = Point2D(-5,10)
-print(n1+n2)
-print(Point2D.instanes_count)
+#             if isinstance(other, self.__class__):
+#                 #ТОчка с точкой
+#                 #Возращает новый объект
+#                 return Point2D(self.x+other.x,self.y+other.y)
+#             elif isinstance(other, (int,float)):
+#                 '''Точка и число
+#                 добавим обим координатам селф число отхер и вернем результат
+#                 Возвращаем старый измененный объект'''
+#                 self.x +=other
+#                 self.y +=other
+#                 return self
+#             else:
+#                 '''В противном случае мы сгенерируем исключени'''
+#                 raise TypeError(f'Не могу добавить {type(other)} к {self.__class__}')
+#         def __sub__(self,other):
+#             #СОздать новый объект как разность координат
+#             return Point2D(self.x-other.x,self.y-other.y)
+#         def __neg__(self):
+#             return Point2D(-self.x,-self.y)
+#         def __eq__(self,other):
+#             return self.x==other.x,self.y==other.y
+# n1 = Point2D(0,5)
+# n2 = Point2D(-5,10)
+# print(n1+n2)
+# print(Point2D.instanes_count)
+
+
+#МОдули
+from module import * 
+
+
+
+#from name_module import *
+
+#ТИпо калькулятор для модуля
+# def add(num1: float,num2: float) ->float:
+#     return num1 + num2
+# def sub(num1: float,num2: float) ->float:
+#     return num1 - num2
+# def mul(num1: float,num2: float) ->float:
+#     return num1 * num2
+# def truediv(num1: float,num2: float) ->float:
+#     return num1 / num2
+# if __name__=='__main__':
+#     print('Modul zapshen kak samostoatelnoa programa')
+#     num1 = int(input('1 число:'))
+#     num2 = int(input('2 число:'))
+#     choice = int(input('Операция или выход:'))
+#     match choice:
+#         case 0:
+#             print('ДЛя выхода интер')
+#             input()
+#         case 1:
+#             print(add,(num1,num2))
+#         case 2:
+#             print(mul,(num1,num2))
+#         case 3:
+#             print(sub,(num1,num2))
+#         case 4:
+#             print(truediv,(num1,num2))
+# # _name__ - Полное имя модуля # __doc__ - Строка документации # __dict_ - Словарь модуля
+# # _file__ - Файл, в котором модуль определяется # __package__ - Имя содержащегося пакета (если он есть)
+# __path__ - Список подкаталогов для поиска полмодулей пакета
+# annotations__ - Аннотации типов уровня поиска
+# my_package/
+# init_
+# i・Py
+# primitive/
+# __init_-py text.py line.py
+# formats/
+# __init__.py
+# jpeg.py
+# png-py
+            
+# полный путь
+# import my_package.primitive.fill.func()
