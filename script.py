@@ -479,7 +479,7 @@
 
 
 #МОдули
-from module import * 
+# from module import * 
 
 
 
@@ -530,3 +530,91 @@ from module import *
 '''
 match and case rabotout tipa if
 '''
+
+
+
+# num = [1,2,3,4]
+# r = (x*x for x in num)
+# print(r)
+# for num in r:
+#     print(num)
+
+# print(next(r))
+# print(next(r))
+
+# numbers = [1, 2, 3, 4]
+# result = (x * x for x in numbers)
+# print(next(result))
+# print(next(result))
+# print(next(result))
+# print(next(result))
+
+# for num in result:
+#     print(num)
+
+
+# f = open('test.txt')
+# lines = (t.strip() for t in f)
+# comments = (t for t in lines if t[0] == '#')
+# for c in comments:
+#     print(c)
+
+# def func(num):
+#    while num > 0:
+#        yield num
+#        num -= 1
+
+# for num in func(5):
+#    print(num)
+
+
+# def func(num):
+#    while num > 0:
+#        yield num
+#        num -= 1
+
+# result = func(5)
+# print(next(result))
+# print(next(result))
+# print(next(result))
+
+
+# def func(num):
+#    while num > 0:
+#        yield num
+#        num -= 1
+
+# result = func(5)
+# print(result.__next__())
+# print(result.__next__())
+
+# Задача 1 
+# Числа Фибоначчи представляют последовательность, получаемую в результате сложения двух предыдущих элементов.  
+# Начинается коллекция с чисел 1 и 11.  
+# Она достаточно быстро растет, поэтому вычисление больших значений занимает немало времени.  
+# Создайте функцию fib(n), генерирующую n чисел Фибоначчи с минимальными затратами ресурсов. 
+# Для реализации этой функции потребуется обратиться к инструкции yield. 
+
+
+
+
+# def fib(n):
+#     a, b = 1, 1
+#     for _ in range(n):
+#         yield a
+#         a, b = b, a + b
+# for num in fib(10):
+#     print(num)
+
+
+
+
+
+emails = {'mgu.edu': ['andrei_serov', 'alexander_pushkin', 'elena_belova', 'kirill_stepanov'],
+      	'gmail.com': ['alena.semyonova', 'ivan.polekhin', 'marina_abrabova'],
+      	'msu.edu': ['sergei.zharkov', 'julia_lyubimova', 'vitaliy.smirnoff'],
+      	'yandex.ru': ['ekaterina_ivanova', 'glebova_nastya'],
+      	'harvard.edu': ['john.doe', 'mark.zuckerberg', 'helen_hunt'],
+      	'mail.ru': ['roman.kolosov', 'ilya_gromov', 'masha.yashkina']}
+
+print(sorted(f"{name}@{d}" for d, name in emails.items() for name in name))
