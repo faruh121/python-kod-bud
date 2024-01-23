@@ -51,5 +51,5 @@ def calculator_program():
 
 calculator_program()
 в одном модуле тк нельзя загружать 2 файла на сайт
-
+а в zip  лень(
 '''
