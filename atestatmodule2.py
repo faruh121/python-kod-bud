@@ -53,3 +53,6 @@ calculator_program()
 в одном модуле тк нельзя загружать 2 файла на сайт
 а в zip  лень(
 '''
+
+
+#cсылка на мой гит хаб https://github.com/faruh121/python-kod-bud

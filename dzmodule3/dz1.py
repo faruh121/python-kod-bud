@@ -21,3 +21,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#cсылка на мой гит хаб https://github.com/faruh121/python-kod-bud

@@ -25,3 +25,5 @@ arcade.set_background_color(arcade.color.RED)
 arcade.schedule(on_draw, 1/60)
 
 arcade.run()
+
+#cсылка на мой гит хаб https://github.com/faruh121/python-kod-bud
