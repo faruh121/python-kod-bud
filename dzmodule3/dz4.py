@@ -1,3 +1,5 @@
+# Отрисовать графическое окно. Добавить персонажа из стандартной библиотеки. Добавить в игру сторонние объекты и реализовать коллизию столкновения объектов.
+
 import arcade
 
 SCREEN_WIDTH = 800
@@ -7,8 +9,8 @@ COIN_SCALE = 0.5
 
 class MyGame(arcade.Window):
     def __init__(self, width, height):
-        super().__init__(width, height, "My Arcade Game")
-        self.character = arcade.Sprite("character.png", CHARACTER_SCALE)
+        super().__init__(width, height, "FARA'S GAME")
+        self.character = arcade.Sprite("img/playerShip1_orange.png", CHARACTER_SCALE)
         self.character.center_x = 100
         self.character.center_y = 100
         self.coins = arcade.SpriteList()
@@ -20,7 +22,8 @@ class MyGame(arcade.Window):
 
     def on_update(self, delta_time):
         self.character.update()
-
+        
+#Реализация столкновений
         for coin in self.coins:
             if arcade.check_for_collision(self.character, coin):
                 coin.remove_from_sprite_lists()
@@ -44,7 +47,6 @@ class MyGame(arcade.Window):
 def main():
     window = MyGame(SCREEN_WIDTH, SCREEN_HEIGHT)
     arcade.run()
-
 if __name__ == "__main__":
     main()
 
