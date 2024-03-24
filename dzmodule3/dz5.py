@@ -16,7 +16,7 @@ class MyGame(arcade.Window):
                                     arcade.Sprite("img/playerShip1_green.png", SPRITE_SCALING)]
         self.current_sprite = 0
         
-        self.set_update_rate(1/10)  # Частота обновления анимации
+        self.set_update_rate(2/20)  # Частота обновления анимации
         
     def on_draw(self):
         arcade.start_render()
@@ -52,17 +52,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
 
 #cсылка на мой гит хаб https://github.com/faruh121/python-kod-bud
